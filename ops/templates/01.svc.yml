@@ -9,8 +9,10 @@ metadata:
 spec:
   selector:
     app: requestbin
+  type: LoadBalancer
   ports:
   - name: http
     port: 80
     targetPort: http
   clusterIP: None
+  
