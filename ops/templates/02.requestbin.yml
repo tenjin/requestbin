@@ -14,7 +14,7 @@ spec:
   template:
     metadata:
       labels:
-        component: requestbin
+        app: requestbin
     spec:
       containers:
       - name: requestbin
@@ -27,5 +27,5 @@ spec:
             cpu: 500m
             memory: 250Mi
         ports:
-        - containerPort: 80
+        - containerPort: 8000
           name: http
