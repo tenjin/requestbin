@@ -1,0 +1,24 @@
+---
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+  namespace: util
+  name: requestbin
+  labels:
+    component: requestbin
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      component: requestbin
+  template:
+    metadata:
+      labels:
+        component: requestbin
+    spec:
+      containers:
+      - name: requestbin
+        image: 038620613384.dkr.ecr.us-east-1.amazonaws.com/tenjin/requestbin:eec544058d184ef9b77717e44fd1ca712af9b515
+        ports:
+        - containerPort: 80
+          name: http
