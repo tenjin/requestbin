@@ -2,7 +2,7 @@
 apiVersion: apps/v1beta1
 kind: Deployment
 metadata:
-  namespace: util
+  namespace: requestbin
   name: requestbin
   labels:
     component: requestbin
