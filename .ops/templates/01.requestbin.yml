@@ -5,7 +5,7 @@ metadata:
   namespace: requestbin
   name: requestbin
   labels:
-    component: requestbin
+    app: requestbin
 spec:
   replicas: 1
   selector:
@@ -18,7 +18,7 @@ spec:
     spec:
       containers:
       - name: requestbin
-        image: 038620613384.dkr.ecr.us-east-1.amazonaws.com/tenjin/requestbin:eec544058d184ef9b77717e44fd1ca712af9b515
+        image: 038620613384.dkr.ecr.us-east-1.amazonaws.com/tenjin/requestbin:latest
         ports:
         - containerPort: 80
           name: http
