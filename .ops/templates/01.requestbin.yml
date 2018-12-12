@@ -19,6 +19,13 @@ spec:
       containers:
       - name: requestbin
         image: 038620613384.dkr.ecr.us-east-1.amazonaws.com/tenjin/requestbin:latest
+        resources:
+          requests:
+            cpu: 10m
+            memory: 150Mi
+          limits:
+            cpu: 500m
+            memory: 250Mi
         ports:
         - containerPort: 80
           name: http
