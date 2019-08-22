@@ -23,9 +23,11 @@ spec:
           requests:
             cpu: 10m
             memory: 150Mi
+            ephemeral-storage: 1Mi
           limits:
             cpu: 500m
             memory: 250Mi
+            ephemeral-storage: 1Mi
         ports:
         - containerPort: 8000
           name: http
